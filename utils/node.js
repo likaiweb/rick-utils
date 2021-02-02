@@ -1,4 +1,4 @@
-function nlog(text,color) {
+export const nlog=(text,color)=>{
     const colorObg={
         'bright'    : '\x1B[1m', // 亮色
         'grey'      : '\x1B[2m', // 灰色
@@ -24,7 +24,4 @@ function nlog(text,color) {
         'whiteBG'   : '\x1B[47m' // 背景色为白色
     }
     console.log(`${colorObg[color]}%s\x1B[0m`,text)
-}
-module.exports={
-    nlog
 }

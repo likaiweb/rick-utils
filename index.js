@@ -1,7 +1,8 @@
 
-require('babel-register');
-import {nlog} from './utils/node'
-
+import * as nUtils from './utils/node';
+import * as jsUtils from './utils/common';
 module.exports={
-    nlog
+  ...nUtils,
+  ...jsUtils,
 }
+;
