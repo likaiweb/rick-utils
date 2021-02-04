@@ -1,8 +1,7 @@
 
-import * as nUtils from './utils/node';
-import * as jsUtils from './utils/common';
+const nUtils=require('./utils/node');
+const jsUtils=require('./utils/common');
 module.exports={
   ...nUtils,
   ...jsUtils,
-}
-;
+};

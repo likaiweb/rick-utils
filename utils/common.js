@@ -1,5 +1,5 @@
 // 获取链接参数
-export const parseUrl=(url=location.href)=>{
+const parseUrl=(url=location.href)=>{
   const params=url.split('?')[1].split('&'); const res={};
   if (params&&params.length) {
     params.forEach((_)=>{
@@ -9,7 +9,7 @@ export const parseUrl=(url=location.href)=>{
   return res;
 };
 // 获取当前时间
-export const curentTime=()=>{
+const curentTime=()=>{
   const now = new Date();
   const year = now.getFullYear(); // 年
   const month = now.getMonth() + 1; // 月
@@ -27,7 +27,7 @@ export const curentTime=()=>{
   clock += mm;
   return (clock);
 };
-export const dateFormat = (date, fmt='yyyy-MM-dd hh:mm:ss')=>{
+const dateFormat = (date, fmt='yyyy-MM-dd hh:mm:ss')=>{
   date=new Date(date);
   const o = {
     'M+': date.getMonth() + 1, // 月份
@@ -53,3 +53,9 @@ export const dateFormat = (date, fmt='yyyy-MM-dd hh:mm:ss')=>{
   }
   return fmt;
 };
+module.exports={
+  parseUrl,
+  curentTime,
+  dateFormat,
+}
+;
